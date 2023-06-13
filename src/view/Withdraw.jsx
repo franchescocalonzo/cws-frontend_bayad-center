@@ -70,7 +70,7 @@ export default function Withdraw() {
           className={`${bgColor} grid-container grid content-center  md:h-[430px]  sm:max-w-3xl rounded-[1rem] overflow-hidden md:shadow-lg p-10 w-screen `}
         >
           <div>
-            {!dataResponse && (
+            {!dataResponse && !withdraw.isLoading && (
               <button
                 type="button"
                 onClick={() => {
