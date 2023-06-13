@@ -17,8 +17,7 @@ function App() {
             <Route path="/deposit" element={<DepositView />} />
             <Route path="/withdraw" exact element={<WithdrawView />} />
           </Route>
-          <Route path="/" element={<Navigate to="/login" replace />} />
-          <Route path="/login" element={<LoginView />} exact />
+          <Route path="/" element={<LoginView />} exact />
           <Route path="/page-not-found" exact element={<PageNotFoundView />} />
           <Route path="*" element={<PageNotFoundView />} />
         </Routes>

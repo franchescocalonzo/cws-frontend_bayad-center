@@ -50,7 +50,7 @@ export default function Withdraw() {
     },
     onError: (response) => {
       alert("Internal Error. Please contact server admin.");
-      navigate("/login");
+      navigate("/");
       console.log(response);
     },
     onSettled: () => {

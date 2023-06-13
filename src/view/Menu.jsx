@@ -103,7 +103,7 @@ export default function Menu() {
                     type="button"
                     onClick={() => {
                       logout();
-                      navigate("/login");
+                      navigate("/");
                     }}
                     className="text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-lg px-5 py-2.5 text-center w-full "
                   >

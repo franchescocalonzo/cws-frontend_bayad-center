@@ -7,7 +7,7 @@ const ResponseMessage = (response) => {
   const nextDestination = () => {
     if (data.status == true) {
       logout();
-      navigate("/login");
+      navigate("/");
     } else {
       navigate(0);
     }

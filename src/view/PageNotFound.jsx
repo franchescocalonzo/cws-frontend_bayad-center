@@ -24,7 +24,7 @@ export default function PageNotFound() {
               <a
                 href="#"
                 onClick={() => {
-                  navigate("/login");
+                  navigate("/");
                 }}
                 className="pb-3 rounded-md bg-[#F26122] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#c54f1c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >

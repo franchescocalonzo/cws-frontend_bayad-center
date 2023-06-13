@@ -51,7 +51,7 @@ export default function CashIn() {
     },
     onError: (response) => {
       alert("Internal Error. Please contact server admin.");
-      navigate("/login");
+      navigate("/");
       logout();
       console.log(response);
     },
