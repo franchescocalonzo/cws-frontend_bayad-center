@@ -15,7 +15,7 @@ withdraw/deposit funds and verify the default user's current balance.
 
 
 ### API PUBLIC URL
-[cws.franchescocalonzo.dev/balance-inquiry](https://cws.franchescocalonzo.dev/api/balance-inquiry) - you can test it via POSTMAN
+[cws.franchescocalonzo.dev/api/balance-inquiry](https://cws.franchescocalonzo.dev/api/balance-inquiry) - you can test it via POSTMAN
 
 ### FRONT-END APPLICATION
 [https:cws-fe.franchescocalonzo.dev/](https://cws-fe.franchescocalonzo.dev/)
