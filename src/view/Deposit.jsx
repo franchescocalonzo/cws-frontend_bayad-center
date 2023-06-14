@@ -45,23 +45,17 @@ export default function CashIn() {
   // handles the response of the 'do Deposit' function
   const deposit = useMutation(doDeposit, {
     onSuccess: (response) => {
-      console.log("On success response:", response.data);
       responseAnalyzer(response.data);
-      // console.log("Pin Status?", response.data.pin_status);
     },
     onError: (response) => {
       alert("Internal Error. Please contact server admin.");
       navigate("/");
       logout();
-      console.log(response);
     },
-    onSettled: () => {
-      console.log("API call settled.");
-    },
+    onSettled: () => {},
   });
 
   function onSubmit(formData) {
-    console.log("Submitting..");
     deposit.mutate(formData);
   }
 

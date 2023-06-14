@@ -44,22 +44,16 @@ export default function Withdraw() {
   // handles the response of the 'do withdraw' function
   const withdraw = useMutation(doWithdraw, {
     onSuccess: (response) => {
-      console.log("On success response:", response.data);
       responseAnalyzer(response.data);
-      // console.log("Pin Status?", response.data.pin_status);
     },
     onError: (response) => {
       alert("Internal Error. Please contact server admin.");
       navigate("/");
-      console.log(response);
     },
-    onSettled: () => {
-      console.log("API call settled.");
-    },
+    onSettled: () => {},
   });
 
   function onSubmit(formData) {
-    console.log("Submitting..");
     withdraw.mutate(formData);
   }
 

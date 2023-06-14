@@ -38,14 +38,12 @@ export default function Login() {
   } = useForm({ mode: "onChange", resolver: yupResolver(schema) });
 
   const doValidate = async (data) => {
-    console.log("Final Value of PIN:", data);
     const res = await validatePin(data);
     return res;
   };
 
   const processPinStatus = (data) => {
     const { status, title, message } = data;
-    console.log("Processing pin status: ", status);
 
     if (status) {
       userValidated();
@@ -58,18 +56,12 @@ export default function Login() {
   // handles the response of the 'do validate' function
   const validate = useMutation(doValidate, {
     onSuccess: (response) => {
-      // console.log("On success response:", response);
-      // console.log("Pin Status?", response.data.pin_status);
-
       processPinStatus(response.data);
     },
     onError: (response) => {
       alert("Api: Error");
-      console.log(response);
     },
-    onSettled: () => {
-      console.log("API call settled.");
-    },
+    onSettled: () => {},
   });
 
   const mergedPin = (form_data) => {
@@ -108,8 +100,6 @@ export default function Login() {
     }
 
     if (e.target.value === "" && errorMessage) {
-      console.log("wala nang laman");
-      // document.querySelector(`input[id="pin_1]`).focus();
       setErrorMessage(undefined);
     }
   };
